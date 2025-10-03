@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>olx</h1>
+        <div id="auth-controls">
+            <button id="signup-btn">Sign Up</button>
+            <button id="signin-btn">Sign In</button>
+        </div>
+        <button id="sell-btn" disabled>Sell Product</button>
+    </header>
+
+    <main id="product-list">
+
+    </main>
+
+    <div id="modal-container" class="hidden">
+
+        <div id="auth-modal" class="modal">
+            <h3>User Authentication</h3>
+            <form id="auth-form">
+                <input type="email" id="auth-email" placeholder="Email" required><br>
+                <input type="password" id="auth-password" placeholder="Password" required><br>
+                <button type="submit" id="auth-submit-btn">Submit</button>
+            </form>
+            <button class="close-btn">Close</button>
+        </div>
+
+        <div id="sell-modal" class="modal hidden">
+            <h3>Post Your Ad</h3>
+            <form id="sell-form">
+                <input type="text" id="ad-title" placeholder="Title" required><br>
+                <textarea id="ad-description" placeholder="Description" required></textarea><br>
+                <input type="number" id="ad-price" placeholder="Price (PKR)" required><br>
+                <input type="url" id="ad-image-url" placeholder="Image URL (e.g., https://example.com/img.jpg)"
+                    required><br>
+                <button type="submit">Post Ad</button>
+            </form>
+            <button class="close-btn">Close</button>
+        </div>
+
+        <div id="detail-modal" class="modal hidden large-modal">
+            <div id="detail-content">
+            </div>
+            <button class="close-btn">Close</button>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 olx | All Rights Reserved</p>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
